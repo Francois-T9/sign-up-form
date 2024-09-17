@@ -10,6 +10,10 @@ body {
     
 }
 
+h1, p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -33,61 +37,21 @@ body {
 .background-image {
    
     width: 40%;
-    
-    
-    
+  
 }
-
-
-.header, .footer {
-    
-    height: calc(100px + 200px);
-    font-weight: 700;
-    
-}
-
-.sign-up-form {
-   
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-   
-   
-    
-}
-
-.sign-up-form form {
-    font-weight: 700;
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 200px;
-    gap: 50px;
-    
-}
-
-.sign-up-form > *,
-.header>*,
-.footer>*
- {
-    margin-left: 50px;
-    margin-top: 50px;
-}
-
-.footer button {
-    background-color: #596D48;
-    color: white;
-    font-weight: 700;
-    border-radius: 10px;
-    font-size: 32px;
-    padding: 10px 50px 10px 50px;
-    
-}
-
 .background-image img {
     width: 100%;
     height: auto;
 }
 
+.background-image > p {
+    position: fixed;
+    bottom: 0px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    left: 20px;
+}
 .logo-container {
     width: inherit;
     height: 100px;
@@ -115,40 +79,115 @@ body {
     margin: 0; /* Remove default margin */
 }
 
-form > div {
-    display: flex;
-    flex-direction: column;
+
+.header, .footer {
+    
+    height: calc(100px + 200px);
+    font-weight: 700;
     
 }
 
-input {
-    border: solid #E5E7EB 1px;
-    height: 20px;
-    border-radius: 5px;
+.sign-up-form {
+   
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    justify-content: center;
+   
+   
+    
 }
 
-input:invalid {
+.sign-up-form form {
+    font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 200px;
+    gap: 50px;
+    width: 50%;
+    align-items: center;
+    margin-bottom: 20px;
+   
+    
+}
+
+.sign-up-form > *,
+.header>*,
+.footer>*
+ {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.footer button {
+    background-color: #596D48;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    font-size: 32px;
+    padding: 10px 50px 10px 50px;
+    
+}
+
+
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    
+}
+
+input,
+input:placeholder-shown {
+    border: solid #E5E7EB 1px; /* Default gray border */
+    height: 25px;
+    width: 250px;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+/* Valid input state */
+input:valid:not(:placeholder-shown) {
+    border: solid green 2px;
+}
+
+/* Invalid input state */
+input:invalid:not(:placeholder-shown) {
     border: solid red 2px;
 }
 
-input:valid {
-    border: solid green;
-}
-
+/* Focused input state */
 input:focus {
     background-color: #f0f0f0;
     border: solid #89ddff;
 }
 
+
+
+.password input:invalid,
+.confirm-password input:invalid
+{
+    border: solid red 2px;
+}
+
+
+
+
 a {
     color:  #596D48;
 }
 
-.password:after,
-.confirm-password:after {
-    content: "* Password is required";
+.error-message {
+    display: none;
     color: red;
-    font-weight: 0;
     font-size: 16px;
+}
 
+.password input:invalid ~ .error-message,
+.confirm-password input:invalid ~ .error-message 
+{
+    display: block; /* Show the error message when input is invalid */
 }
