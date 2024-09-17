@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url(../fonts/Norse-Bold.woff2) format('woff2');
+  }
+  
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.form-container {
+    
+    
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    font-size: 24px;
+    flex: 1;
+    height: inherit;
+   
+    background-color: whitesmoke;
+    
+    
+}
+
+.background-image {
+   
+    width: 40%;
+    
+    
+    
+}
+
+
+.header, .footer {
+    
+    height: calc(100px + 200px);
+    font-weight: 700;
+    
+}
+
+.sign-up-form {
+   
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+   
+   
+    
+}
+
+.sign-up-form form {
+    font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 200px;
+    gap: 50px;
+    
+}
+
+.sign-up-form > *,
+.header>*,
+.footer>*
+ {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.footer button {
+    background-color: #596D48;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    font-size: 32px;
+    padding: 10px 50px 10px 50px;
+    
+}
+
+.background-image img {
+    width: 100%;
+    height: auto;
+}
+
+.logo-container {
+    width: inherit;
+    height: 100px;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute; /* You can keep this if necessary */
+    top: 200px;
+    left: 0; /* Changed to right: 0 to keep it aligned properly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-container img {
+    height: inherit; /* Set a specific height for the image */
+    width: auto;
+    margin-right: 20px; /* Add space between image and text */
+}
+
+.logo-container p {
+    font-family: 'Norse-Bold';
+    font-size: 50px;
+    color: white;
+    margin: 0; /* Remove default margin */
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input {
+    border: solid #E5E7EB 1px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+input:invalid {
+    border: solid red 2px;
+}
+
+input:valid {
+    border: solid green;
+}
+
+input:focus {
+    background-color: #f0f0f0;
+    border: solid #89ddff;
+}
+
+a {
+    color:  #596D48;
+}
