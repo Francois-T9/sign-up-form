@@ -3,7 +3,7 @@ Exercise from [_The Odin Project_](https://www.theodinproject.com/lessons/node-p
 
 **This project will continue to evolve as I advance in my web development journey.**
 
-# Live view of the calculator
+# Live view of the sign-up form
 
 [See live demo here!](https://raw.githack.com/Francois-T9/sign-up-form/main/index.html)
 
